@@ -1,0 +1,51 @@
+/* General Styles for Contact Section */
+.contact-section {
+  background: #002147; /* Azul oscuro */
+  color: #ffffff; /* Texto blanco */
+  padding: 60px 0;
+  font-family: 'Montserrat', sans-serif; /* Fuente limpia */
+}
+
+/* Title Styles */
+.contact-section h2 {
+  color: #f8c846; /* Dorado */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Contact Details */
+.contact-details p {
+  font-size: 1.1rem;
+  color: #d1e7ff; /* Azul claro */
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* Map Container */
+.map-container iframe {
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  height: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+.footer-text {
+  font-size: 0.9rem;
+  color: #d1d1d1; /* Gris claro */
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-section h2 {
+      font-size: 1.5rem;
+  }
+  .map-container iframe {
+      height: 250px;
+  }
+}

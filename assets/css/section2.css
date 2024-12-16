@@ -1,0 +1,75 @@
+/* General Styles for Section 2 */
+.info-section {
+  background: linear-gradient(to bottom, #002147, #003366); /* Fondo degradado azul */
+  color: white; /* Texto blanco para contraste */
+  padding: 50px 0; /* Espaciado superior e inferior */
+}
+
+/* Contenedor general de las columnas */
+.row {
+  display: flex;
+  align-items: flex-start; /* Asegura alineación superior para texto e imágenes */
+  justify-content: center; /* Centra horizontalmente */
+  gap: 20px; /* Espaciado entre las columnas */
+}
+
+/* Contenedor individual de cada columna */
+.col-md-6 {
+  display: flex;
+  flex-direction: column; /* Ordena imagen y texto en columna */
+  align-items: center; /* Centra horizontalmente */
+  text-align: center; /* Texto centrado */
+  max-width: 500px; /* Ancho máximo para columnas */
+  padding: 20px; /* Espaciado interno */
+  box-sizing: border-box; /* Incluye padding en las dimensiones */
+}
+
+/* Estilo para las imágenes */
+.info-image {
+  width: 100%; /* Asegura un ancho uniforme */
+  max-width: 220px; /* Tamaño máximo para mantener proporciones */
+  height: auto; /* Mantiene proporciones */
+  object-fit: contain; /* Ajusta las imágenes sin recortarlas */
+  margin-bottom: 20px; /* Espaciado inferior */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo para los textos */
+.info-text {
+  font-size: 1.2rem;
+  line-height: 1.8; /* Mejora la legibilidad */
+  color: #d1e7ff; /* Azul claro para texto */
+  margin: 0 10px; /* Espaciado lateral */
+}
+
+/* Estilo para las palabras resaltadas */
+.info-text strong {
+  color: #f8c846; /* Dorado para resaltar palabras clave */
+  font-weight: bold;
+}
+
+/* Estilo para las citas */
+.quote-author {
+  font-size: 1rem;
+  font-style: italic;
+  color: #f8c846; /* Dorado */
+  margin-top: 10px;
+}
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column; /* Ordena las columnas verticalmente */
+      gap: 0; /* Elimina espacio entre las columnas */
+  }
+  .col-md-6 {
+      max-width: 100%; /* Ocupa todo el ancho */
+      padding: 10px; /* Reduce el padding */
+  }
+  .info-text {
+      font-size: 1rem; /* Reduce el tamaño de texto */
+  }
+  .info-image {
+      max-width: 150px; /* Reduce el tamaño de las imágenes */
+  }
+}

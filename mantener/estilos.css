@@ -1,0 +1,48 @@
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparente */
+    transition: background-color 0.3s ease;
+  }
+  .navbar-brand .logo {
+    width: 50px;
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    color: white;
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #f8c846; /* Dorado */
+  }
+  
+  /* Carousel */
+  .carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+  }
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .carousel-caption h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .carousel-caption p {
+    font-size: 1.5rem;
+  }
+  .carousel-caption strong {
+    color: #f8c846;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .carousel-caption h1 {
+      font-size: 2rem;
+    }
+    .carousel-caption p {
+      font-size: 1rem;
+    }
+  }
+  
