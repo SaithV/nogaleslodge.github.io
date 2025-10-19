@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { fadeUp } from '@/lib/motion'
 import events from '@/content/events.json'
 import { Link } from 'react-router-dom'
 import { Card, CardContent, CardHeader, CardFooter } from '@/components/ui/card'
@@ -6,9 +7,9 @@ import { Card, CardContent, CardHeader, CardFooter } from '@/components/ui/card'
 export function EventsPreviewSection({ title, cta }: { title: string; cta: string }) {
   const upcoming = [...events].sort((a,b)=> new Date(a.dateStart).getTime()-new Date(b.dateStart).getTime()).slice(0,3)
   return (
-    <section aria-labelledby="events-heading" className="container py-16">
+    <section aria-labelledby="events-heading" className="container section">
       <div className="flex items-center justify-between">
-        <h2 id="events-heading" className="text-3xl md:text-4xl font-serif">{title}</h2>
+        <motion.h2 id="events-heading" variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }} className="h2-tight">{title}</motion.h2>
         <Link to="/events" className="text-primary underline">{cta}</Link>
       </div>
       <div className="mt-6 grid md:grid-cols-3 gap-6">

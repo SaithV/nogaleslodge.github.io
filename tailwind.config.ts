@@ -8,30 +8,52 @@ export default {
     './src/**/*.{ts,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1440px',
+    },
     container: {
       center: true,
-      padding: '1rem',
-      screens: { '2xl': '1280px' },
+      padding: '0.5rem',
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1440px',
+      },
     },
     extend: {
       colors: {
-        background: 'hsl(45 29% 97%)', // ivory
+        // Palette mapping
+        navy: '#0e2235', // deep navy
+        gold: '#c49a3a', // accent
+        offwhite: '#f7f4ef', // surface
+
+        background: 'hsl(45 29% 97%)', // ivory background
         foreground: 'hsl(222.2 47.4% 11.2%)',
         primary: {
-          DEFAULT: '#0F2A44', // deep navy
-          foreground: '#F7F4EA', // ivory text on primary
+          DEFAULT: '#0e2235', // deep navy
+          foreground: '#f7f4ef', // offwhite text on primary
         },
         secondary: {
-          DEFAULT: '#C6A043', // gold accent
-          foreground: '#0F2A44',
+          DEFAULT: '#c49a3a', // gold accent
+          foreground: '#0e2235',
         },
         muted: {
           DEFAULT: '#E6E1D3',
           foreground: '#6b7280',
         },
         card: {
-          DEFAULT: 'hsl(0 0% 100%)',
+          DEFAULT: '#ffffff',
           foreground: 'inherit',
+        },
+        surface: {
+          50: 'rgba(247, 244, 239, 0.5)',
+          70: 'rgba(247, 244, 239, 0.7)',
         },
       },
       fontFamily: {
