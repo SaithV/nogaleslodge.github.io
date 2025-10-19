@@ -1,0 +1,23 @@
+{
+  "siteName": "Nogales Lodge #11",
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "officers": "Oficiales",
+    "events": "Eventos",
+    "gallery": "Galería",
+    "visit": "Visítanos",
+    "join": "Únete",
+    "contact": "Contacto",
+    "resources": "Recursos"
+  },
+  "hero": {
+    "title": "Masonería en Nogales",
+    "subtitle": "Amor Fraternal, Socorro y Verdad",
+    "visit": "Visítanos",
+    "join": "Únete"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Nogales Lodge #11",
+  "short_name": "Nogales #11",
+  "start_url": "/nogaleslodge.github.io/",
+  "scope": "/nogaleslodge.github.io/",
+  "display": "standalone",
+  "background_color": "#F7F4EA",
+  "theme_color": "#0F2A44",
+  "icons": [
+    {
+      "src": "/nogaleslodge.github.io/assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"root":["./src/global.d.ts","./src/main.tsx","./src/components/seo.tsx","./src/components/ui/button.tsx","./src/components/ui/card.tsx","./src/components/ui/toaster.tsx","./src/i18n/index.ts","./src/layouts/sitelayout.tsx","./src/lib/utils.ts","./src/routes/app.tsx","./src/types/jsx-fallback.d.ts","./vite.config.ts","./tailwind.config.ts"],"version":"5.9.3"}

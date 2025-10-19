@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS variables for colors to support dark mode via class */
+:root {
+  --background: 45 29% 97%;
+  --foreground: 222.2 47.4% 11.2%;
+  --primary: 211 62% 16%;
+  --primary-foreground: 45 29% 97%;
+  --secondary: 43 49% 52%;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --primary: 216 34% 17%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 43 49% 52%;
+}
+
+.bg-background { @apply bg-[hsl(var(--background))]; }
+.text-foreground { @apply text-[hsl(var(--foreground))]; }
+.bg-primary { @apply bg-[hsl(var(--primary))]; }
+.text-primary-foreground { @apply text-[hsl(var(--primary-foreground))]; }
+.bg-card { @apply bg-white; }
+
+/* Focus styles */
+:focus-visible {
+  outline: 3px solid hsl(var(--secondary));
+  outline-offset: 2px;
+}
+
+/* Typography tweaks */
+h1, h2, h3, h4 { @apply font-serif; }
+body { @apply font-sans antialiased; }

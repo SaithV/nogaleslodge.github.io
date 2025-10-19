@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://saithv.github.io/nogaleslodge.github.io/sitemap.xml

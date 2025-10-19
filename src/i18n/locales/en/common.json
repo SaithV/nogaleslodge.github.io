@@ -1,0 +1,23 @@
+{
+  "siteName": "Nogales Lodge #11",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "officers": "Officers",
+    "events": "Events",
+    "gallery": "Gallery",
+    "visit": "Visit",
+    "join": "Join",
+    "contact": "Contact",
+    "resources": "Resources"
+  },
+  "hero": {
+    "title": "Freemasonry in Nogales",
+    "subtitle": "Brotherly Love, Relief, and Truth",
+    "visit": "Visit Us",
+    "join": "Join Us"
+  },
+  "footer": {
+    "rights": "All Rights Reserved"
+  }
+}
