@@ -1,0 +1,13 @@
+{
+  "about_intro": [
+    "We are a unique members’ organization rooted in centuries-old Masonic tradition, welcoming men of many ages, races, religions, cultures, and backgrounds who seek to improve themselves and serve their communities."
+  ],
+  "nogales_context": "Nogales takes its name from the Spanish word for walnut tree — nogal — recalling the groves that once shaded the mountain pass. Incorporated as a city in 1893 and paired with Nogales, Sonora across the line, Nogales has long been a gateway for commerce and culture along the U.S.–Mexico border, home to hundreds of historic properties and a rich shared heritage.",
+  "values": [
+    { "title": "Community", "subtitle": "Brotherly Love", "desc": "We cultivate friendship and fraternity that strengthen families and neighborhoods." },
+    { "title": "Service", "subtitle": "Relief", "desc": "We support charitable efforts and aid in times of need." },
+    { "title": "Tradition", "subtitle": "Truth", "desc": "We preserve timeless teachings through moral conduct and learning." },
+    { "title": "Justice", "subtitle": "Upright conduct", "desc": "We hold ourselves to integrity in word and deed." }
+  ],
+  "visit_traveling_brothers": "Traveling Masons are welcome. Present your current dues card; please contact the Secretary in advance when possible."
+}

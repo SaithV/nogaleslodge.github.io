@@ -11,6 +11,7 @@ import Contact from '@/routes/Contact'
 import Resources from '@/routes/Resources'
 import Privacy from '@/routes/Privacy'
 import Terms from '@/routes/Terms'
+import Legacy from '@/routes/Legacy'
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
   <Route path="/resources" element={<Resources />} />
   <Route path="/privacy" element={<Privacy />} />
   <Route path="/terms" element={<Terms />} />
+  <Route path="/legacy" element={<Legacy />} />
       </Route>
     </Routes>
   )

@@ -1,0 +1,19 @@
+{
+  "tagline": "Serving the Citizens of Nogales, Arizona since 1892.",
+  "address": "1620 N Royal Rd, Nogales, AZ 85621-1549",
+  "legacy_short_points": [
+    "Founded in 1892 — Serving Nogales, Arizona.",
+    "Multi-generation membership and community tradition.",
+    "Members from diverse backgrounds, faiths, and ages."
+  ],
+  "legacy_long": [
+    "Nogales Lodge #11 F.&A.M. has served the citizens of Nogales, Arizona since 1892, upholding the Masonic tenets of Brotherly Love, Relief, and Truth. Our Lodge brings together men of character committed to moral living, charity, and truth — with fellowship that spans generations and backgrounds.",
+    "As part of Arizona Freemasonry, our members embrace service to God, family, country, neighbors, and self through practical charity and personal conduct guided by morality and justice."
+  ],
+  "timeline": [
+    { "year": "1892", "title": "Lodge established in Nogales, Arizona", "desc": "Local brethren organize Nogales Lodge #11 to serve the community." },
+    { "year": "1893", "title": "City of Nogales incorporated", "desc": "The Lodge grows alongside the newly incorporated border city." },
+    { "year": "20th Century", "title": "Community & civic participation", "desc": "Members support local causes, relief, and fellowship across decades." },
+    { "year": "Today", "title": "Brotherhood in action", "desc": "Ongoing meetings, charitable work, and welcoming traveling brethren at 1620 N Royal Rd." }
+  ]
+}

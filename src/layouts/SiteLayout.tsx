@@ -32,19 +32,19 @@ export default function SiteLayout() {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO />
-      <header className={`sticky top-0 z-50 bg-[rgba(14,34,53,.65)] backdrop-blur-md border-b border-white/10 transition-shadow ${scrolled ? 'shadow-[0_6px_20px_rgba(0,0,0,.18)]' : 'shadow-[0_1px_10px_rgba(0,0,0,.15)]'}`}>
+      <header className={`sticky top-0 z-50 bg-[#0E2235] text-white border-b border-white/10 transition-shadow ${scrolled ? 'shadow-[0_6px_20px_rgba(0,0,0,.18)]' : 'shadow-[0_1px_10px_rgba(0,0,0,.15)]'}`}>
         <nav className={`container flex items-center justify-between transition-all ${scrolled ? 'py-2' : 'py-3'}`}>
           <Link className="font-serif text-xl" to="/">{t('siteName')}</Link>
-          <ul className="hidden md:flex items-center gap-6 text-white/90">
-            <li><NavLink to="/" className={({isActive})=> `hover:text-gold/90 ${isActive ? 'underline underline-offset-4 decoration-gold' : ''}`}>{nav.home}</NavLink></li>
-            <li><NavLink to="/about" className={({isActive})=> `hover:text-gold/90 ${isActive ? 'underline underline-offset-4 decoration-gold' : ''}`}>{nav.about}</NavLink></li>
-            <li><NavLink to="/officers" className={({isActive})=> `hover:text-gold/90 ${isActive ? 'underline underline-offset-4 decoration-gold' : ''}`}>{nav.officers}</NavLink></li>
-            <li><NavLink to="/events" className={({isActive})=> `hover:text-gold/90 ${isActive ? 'underline underline-offset-4 decoration-gold' : ''}`}>{nav.events}</NavLink></li>
-            <li><NavLink to="/gallery" className={({isActive})=> `hover:text-gold/90 ${isActive ? 'underline underline-offset-4 decoration-gold' : ''}`}>{nav.gallery}</NavLink></li>
-            <li><NavLink to="/visit" className={({isActive})=> `hover:text-gold/90 ${isActive ? 'underline underline-offset-4 decoration-gold' : ''}`}>{nav.visit}</NavLink></li>
-            <li><NavLink to="/join" className={({isActive})=> `hover:text-gold/90 ${isActive ? 'underline underline-offset-4 decoration-gold' : ''}`}>{nav.join}</NavLink></li>
-            <li><NavLink to="/contact" className={({isActive})=> `hover:text-gold/90 ${isActive ? 'underline underline-offset-4 decoration-gold' : ''}`}>{nav.contact}</NavLink></li>
-            <li><NavLink to="/resources" className={({isActive})=> `hover:text-gold/90 ${isActive ? 'underline underline-offset-4 decoration-gold' : ''}`}>{nav.resources}</NavLink></li>
+          <ul className="hidden md:flex items-center gap-6 text-white">
+            <li><NavLink to="/" className={({isActive})=> `${isActive ? 'underline decoration-2 underline-offset-4 decoration-[#C49A3A]' : 'hover:underline decoration-2 underline-offset-4 decoration-[#C49A3A]'}`}>{nav.home}</NavLink></li>
+            <li><NavLink to="/about" className={({isActive})=> `${isActive ? 'underline decoration-2 underline-offset-4 decoration-[#C49A3A]' : 'hover:underline decoration-2 underline-offset-4 decoration-[#C49A3A]'}`}>{nav.about}</NavLink></li>
+            <li><NavLink to="/officers" className={({isActive})=> `${isActive ? 'underline decoration-2 underline-offset-4 decoration-[#C49A3A]' : 'hover:underline decoration-2 underline-offset-4 decoration-[#C49A3A]'}`}>{nav.officers}</NavLink></li>
+            <li><NavLink to="/events" className={({isActive})=> `${isActive ? 'underline decoration-2 underline-offset-4 decoration-[#C49A3A]' : 'hover:underline decoration-2 underline-offset-4 decoration-[#C49A3A]'}`}>{nav.events}</NavLink></li>
+            <li><NavLink to="/gallery" className={({isActive})=> `${isActive ? 'underline decoration-2 underline-offset-4 decoration-[#C49A3A]' : 'hover:underline decoration-2 underline-offset-4 decoration-[#C49A3A]'}`}>{nav.gallery}</NavLink></li>
+            <li><NavLink to="/visit" className={({isActive})=> `${isActive ? 'underline decoration-2 underline-offset-4 decoration-[#C49A3A]' : 'hover:underline decoration-2 underline-offset-4 decoration-[#C49A3A]'}`}>{nav.visit}</NavLink></li>
+            <li><NavLink to="/join" className={({isActive})=> `${isActive ? 'underline decoration-2 underline-offset-4 decoration-[#C49A3A]' : 'hover:underline decoration-2 underline-offset-4 decoration-[#C49A3A]'}`}>{nav.join}</NavLink></li>
+            <li><NavLink to="/contact" className={({isActive})=> `${isActive ? 'underline decoration-2 underline-offset-4 decoration-[#C49A3A]' : 'hover:underline decoration-2 underline-offset-4 decoration-[#C49A3A]'}`}>{nav.contact}</NavLink></li>
+            <li><NavLink to="/resources" className={({isActive})=> `${isActive ? 'underline decoration-2 underline-offset-4 decoration-[#C49A3A]' : 'hover:underline decoration-2 underline-offset-4 decoration-[#C49A3A]'}`}>{nav.resources}</NavLink></li>
             <li><LanguageToggle /></li>
           </ul>
         </nav>
