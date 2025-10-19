@@ -50,3 +50,30 @@ body { line-height: 1.6; font-feature-settings: 'liga', 'kern'; }
 .h1-tight { @apply text-5xl md:text-7xl font-serif tracking-tight leading-[1.05]; }
 .h2-tight { @apply text-3xl md:text-4xl font-serif tracking-tight; }
 .lede { @apply text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-3xl; }
+
+/* Polished spacing for mobile-first sections */
+.section { @apply py-10 md:py-20; }
+
+/* Strong text shadow utility for hero titles */
+.text-shadow-strong { text-shadow: 0 0 15px rgba(0,0,0,0.35); }
+
+/* Base transition utility for consistent motion */
+.transition-base { @apply transition duration-300 ease-out; }
+
+/* Reduced motion: respect user preference */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Slow pulse animation for subtle icon life */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.03); }
+}
+.animate-pulse-slow { animation: pulse-slow 2.5s ease-in-out infinite; }
