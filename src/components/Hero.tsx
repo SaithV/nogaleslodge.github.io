@@ -3,10 +3,11 @@ import { useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
 
+const BASE = import.meta.env.BASE_URL
 const slides = [
-  { src: '/nogaleslodge.github.io/assets/images/carousel/image1.jpg', title: 'Freemasonry', subtitle: 'Brotherly Love • Relief • Truth' },
-  { src: '/nogaleslodge.github.io/assets/images/carousel/image2.jpg', title: 'Brotherhood', subtitle: 'Fellowship and Service' },
-  { src: '/nogaleslodge.github.io/assets/images/carousel/image3.jpg', title: 'Community', subtitle: 'Serving God, Family, Country, Neighbors, Self' },
+  { src: `${BASE}assets/images/carousel/image1.jpg`, title: 'Freemasonry', subtitle: 'Brotherly Love • Relief • Truth' },
+  { src: `${BASE}assets/images/carousel/image2.jpg`, title: 'Brotherhood', subtitle: 'Fellowship and Service' },
+  { src: `${BASE}assets/images/carousel/image3.jpg`, title: 'Community', subtitle: 'Serving God, Family, Country, Neighbors, Self' },
 ]
 
 export function Hero() {

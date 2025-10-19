@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "headline": "Over a Century of Brotherhood in Nogales",
+    "subhead": "Serving the Citizens of Nogales, Arizona since 1892.",
+    "images": [
+      "assets/images/carousel/image1.jpg",
+      "assets/images/carousel/image2.jpg",
+      "assets/images/carousel/image3.jpg"
+    ]
+  },
+  "legacy": {
+    "tagline": "SERVING THE CITIZENS OF NOGALES, ARIZONA SINCE 1892.",
+    "address": "1620 N Royal Rd, Nogales AZ 85621-1549",
+    "bullets": [
+      "Founded in 1892 – Serving Nogales, Arizona.",
+      "Multi‑generation membership and community tradition.",
+      "Members of all backgrounds, faiths, and ages."
+    ]
+  },
+  "community": {
+    "title": "Nogales & Our Community",
+    "body": "Nogales takes its name from the Spanish word for walnut tree—nogal—recalling the groves that once shaded the mountain pass. Incorporated as a city in 1893, it stands at the historic border with Nogales, Sonora, a gateway for commerce and culture. With hundreds of historic properties, Nogales reflects a deep, shared heritage we’re proud to serve.",
+    "image": "assets/images/let-there-be-light.png"
+  },
+  "values": {
+    "items": [
+      { "title": "Community", "subtitle": "Brotherly Love", "value": "morality" },
+      { "title": "Service", "subtitle": "Relief", "value": "charity" },
+      { "title": "Tradition", "subtitle": "Truth", "value": "truth" },
+      { "title": "Justice", "subtitle": "Upright conduct", "value": "justice" }
+    ]
+  },
+  "impactStats": [
+    { "label": "Years of Service", "value": "130+" },
+    { "label": "Members from Diverse Backgrounds", "value": "100+" },
+    { "label": "Hours of Community Service Annually", "value": "500+" }
+  ],
+  "eventsPreview": {
+    "title": "Upcoming Events",
+    "cta": "See All Events"
+  },
+  "galleryPreview": {
+    "title": "Gallery Snapshot",
+    "cta": "View Full Gallery",
+    "images": [
+      "assets/images/carousel/image1.jpg",
+      "assets/images/carousel/image2.jpg",
+      "assets/images/carousel/image3.jpg"
+    ]
+  },
+  "visitUs": {
+    "title": "Visiting & Traveling Brothers",
+    "text": "We welcome traveling Masons. Present your current dues card and make yourself at home—contact the Secretary in advance when possible.",
+    "cta": "Plan Your Visit",
+    "lat": 31.364532,
+    "lng": -110.931843
+  },
+  "ctaBanner": {
+    "title": "Be part of our legacy. Join or Visit today.",
+    "primary": "Join Us",
+    "secondary": "Visit Us"
+  }
+}
