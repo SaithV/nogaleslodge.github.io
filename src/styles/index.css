@@ -77,3 +77,6 @@ body { line-height: 1.6; font-feature-settings: 'liga', 'kern'; }
   50% { opacity: 0.85; transform: scale(1.03); }
 }
 .animate-pulse-slow { animation: pulse-slow 2.5s ease-in-out infinite; }
+
+/* Hint intrinsic size for Leaflet tiles to avoid thin-slice paints */
+img.leaflet-tile { contain-intrinsic-size: 256px 256px; }
