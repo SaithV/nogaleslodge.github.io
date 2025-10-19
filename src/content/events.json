@@ -1,0 +1,21 @@
+[
+  {
+    "id": "stated-2025-11",
+    "title": "Stated Meeting",
+    "dateStart": "2025-11-05T19:00:00-07:00",
+    "location": "Nogales Lodge #11, 1620 N Royal Rd, Nogales, AZ",
+    "description": "Monthly Stated Meeting for members.",
+    "isStated": true,
+    "isPublic": false
+  },
+  {
+    "id": "food-drive-2025",
+    "title": "Holiday Food Drive",
+    "dateStart": "2025-12-10T10:00:00-07:00",
+    "dateEnd": "2025-12-10T14:00:00-07:00",
+    "location": "Lodge Parking Lot",
+    "description": "Community food collection for local families.",
+    "isStated": false,
+    "isPublic": true
+  }
+]

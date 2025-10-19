@@ -1,0 +1,13 @@
+{
+  "albums": [
+    {
+      "id": "lodge-life",
+      "title": "Lodge Life",
+      "media": [
+        { "src": "/nogaleslodge.github.io/assets/images/carousel/image1.jpg", "alt": "Lodge", "caption": "Welcome to Lodge #11" },
+        { "src": "/nogaleslodge.github.io/assets/images/carousel/image2.jpg", "alt": "Brotherhood", "caption": "Brotherhood" },
+        { "src": "/nogaleslodge.github.io/assets/images/carousel/image3.jpg", "alt": "Community", "caption": "Community" }
+      ]
+    }
+  ]
+}

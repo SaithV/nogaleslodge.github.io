@@ -1,0 +1,12 @@
+{
+  "General": [
+    { "q": "What is Freemasonry?", "a": "A fraternity that seeks to build better men and communities through moral teachings and fellowship." },
+    { "q": "Is Freemasonry a religion?", "a": "No. It is not a religion, nor a substitute for one. Members are encouraged to practice their own faith." }
+  ],
+  "Visiting": [
+    { "q": "Can I visit if I'm a traveling Mason?", "a": "Yes, present a current dues card and proper identification. Contact the Secretary in advance if possible." }
+  ],
+  "Joining": [
+    { "q": "How do I join?", "a": "Ask, and we will guide you. Reach out via our Join page to start the conversation." }
+  ]
+}

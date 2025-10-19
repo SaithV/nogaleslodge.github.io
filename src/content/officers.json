@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Worshipful Master", "role": "WB John Doe", "photo": null },
+  { "id": 2, "name": "Senior Warden", "role": "Bro. Alex Smith", "photo": null },
+  { "id": 3, "name": "Junior Warden", "role": "Bro. Miguel Pérez", "photo": null },
+  { "id": 4, "name": "Treasurer", "role": "WB Jane Johnson", "photo": null },
+  { "id": 5, "name": "Secretary", "role": "WB Roberto López", "photo": null }
+]
