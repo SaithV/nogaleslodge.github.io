@@ -18,19 +18,54 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 8
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # Prefer pnpm, but gracefully fall back to npm if pnpm step fails.
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build
-      # SPA fallback for client-side routing
-      - run: cp dist/index.html dist/404.html
-      - uses: actions/upload-pages-artifact@v3
+          cache: 'npm'
+
+      - name: Detect package manager
+        id: pm
+        run: |
+          if [ -f pnpm-lock.yaml ]; then
+            echo "manager=pnpm" >> $GITHUB_OUTPUT
+          else
+            echo "manager=npm" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Install deps (pnpm)
+        if: steps.pm.outputs.manager == 'pnpm'
+        run: |
+          corepack prepare pnpm@8 --activate
+          pnpm i --frozen-lockfile
+
+      - name: Install deps (npm)
+        if: steps.pm.outputs.manager != 'pnpm'
+        run: npm ci
+
+      - name: Build (pnpm)
+        if: steps.pm.outputs.manager == 'pnpm'
+        run: pnpm build
+
+      - name: Build (npm)
+        if: steps.pm.outputs.manager != 'pnpm'
+        run: npm run build
+
+      - name: SPA fallback (copy 404.html)
+        run: cp dist/index.html dist/404.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
@@ -43,57 +78,3 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches: [ main ]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'pnpm'
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-      - name: Build
-        run: pnpm build
-      - name: Copy static image assets
-        run: |
-          mkdir -p dist/assets
-          if [ -d assets/images ]; then cp -R assets/images dist/assets/images; fi
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-  deploy:
-   needs: build
-   runs-on: ubuntu-latest
-   environment:
-     name: github-pages
-     url: ${{ steps.deployment.outputs.page_url }}
-   steps:
-     - name: Deploy to GitHub Pages
-       id: deployment
-       uses: actions/deploy-pages@v4
