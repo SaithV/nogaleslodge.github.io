@@ -1,0 +1,87 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Detectar gestor y lockfile
+      - name: Detect package manager + lockfile
+        id: detect
+        run: |
+          if [ -f pnpm-lock.yaml ]; then
+            echo "pm=pnpm" >> $GITHUB_OUTPUT; echo "lock=true" >> $GITHUB_OUTPUT
+          elif [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
+            echo "pm=npm" >> $GITHUB_OUTPUT; echo "lock=true" >> $GITHUB_OUTPUT
+          elif [ -f yarn.lock ]; then
+            echo "pm=yarn" >> $GITHUB_OUTPUT; echo "lock=true" >> $GITHUB_OUTPUT
+          else
+            echo "pm=npm" >> $GITHUB_OUTPUT; echo "lock=false" >> $GITHUB_OUTPUT
+          fi
+
+      # Instalar deps
+      - name: Install (pnpm)
+        if: steps.detect.outputs.pm == 'pnpm'
+        run: |
+          corepack prepare pnpm@8 --activate
+          if [ "${{ steps.detect.outputs.lock }}" = "true" ]; then pnpm i --frozen-lockfile; else pnpm i; fi
+
+      - name: Install (npm)
+        if: steps.detect.outputs.pm == 'npm'
+        run: |
+          if [ "${{ steps.detect.outputs.lock }}" = "true" ]; then npm ci; else npm install; fi
+
+      - name: Install (yarn)
+        if: steps.detect.outputs.pm == 'yarn'
+        run: |
+          if [ "${{ steps.detect.outputs.lock }}" = "true" ]; then yarn install --frozen-lockfile; else yarn install; fi
+
+      # Build
+      - name: Build
+        run: |
+          if [ "${{ steps.detect.outputs.pm }}" = "pnpm" ]; then pnpm build;
+          elif [ "${{ steps.detect.outputs.pm }}" = "yarn" ]; then yarn build;
+          else npm run build; fi
+
+      # SPA fallback para React Router
+      - name: Add SPA fallback
+        run: cp dist/index.html dist/404.html
+
+      # Subir artifact de Pages
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
