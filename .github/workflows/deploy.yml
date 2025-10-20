@@ -24,7 +24,6 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # Prefer pnpm, but gracefully fall back to npm if pnpm step fails.
       - name: Enable corepack
         run: corepack enable
 
@@ -47,7 +46,7 @@ jobs:
         if: steps.pm.outputs.manager == 'pnpm'
         run: |
           corepack prepare pnpm@8 --activate
-          pnpm i --frozen-lockfile
+          pnpm install --frozen-lockfile
 
       - name: Install deps (npm)
         if: steps.pm.outputs.manager != 'pnpm'
@@ -61,7 +60,7 @@ jobs:
         if: steps.pm.outputs.manager != 'pnpm'
         run: npm run build
 
-      - name: SPA fallback (copy 404.html)
+      - name: Add SPA fallback
         run: cp dist/index.html dist/404.html
 
       - name: Upload artifact
