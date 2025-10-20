@@ -3,6 +3,7 @@ import { Toaster } from '@/components/ui/toaster'
 import { useTranslation } from 'react-i18next'
 import { SEO } from '@/components/SEO'
 import { useEffect, useState } from 'react'
+import SkipLink from '@/components/a11y/SkipLink'
 
 function LanguageToggle() {
   const { i18n } = useTranslation()
@@ -29,9 +30,15 @@ export default function SiteLayout() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+  useEffect(() => {
+    if (window.location.hash === '#main') {
+      document.getElementById('main')?.focus()
+    }
+  }, [])
   return (
     <div className="min-h-screen flex flex-col">
       <SEO />
+  <SkipLink />
       <header className={`sticky top-0 z-50 bg-[#0E2235] text-white border-b border-white/10 transition-shadow ${scrolled ? 'shadow-[0_6px_20px_rgba(0,0,0,.18)]' : 'shadow-[0_1px_10px_rgba(0,0,0,.15)]'}`}>
         <nav className={`container flex items-center justify-between transition-all ${scrolled ? 'py-2' : 'py-3'}`}>
           <Link className="font-serif text-xl" to="/">{t('siteName')}</Link>
@@ -49,7 +56,7 @@ export default function SiteLayout() {
           </ul>
         </nav>
       </header>
-      <main id="root" className="flex-1">
+  <main id="main" tabIndex={-1} className="flex-1">
         <Outlet />
       </main>
       <footer className="mt-auto bg-[#112a42] border-t border-white/10 text-white/90">

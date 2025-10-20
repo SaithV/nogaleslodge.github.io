@@ -1,5 +1,5 @@
 import { SEO } from '@/components/SEO'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import InlineMap from '@/components/maps/InlineMap'
 
 const position: [number, number] = [31.364532, -110.931843]
@@ -15,7 +15,7 @@ export default function Visit() {
           <button onClick={() => navigate('/')} className="rounded-md border border-white/20 px-3 py-1.5 hover:bg-white/10 focus-visible:ring-2">← Back to Home</button>
           <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground">
             <ol className="flex gap-2">
-              <li><a href="/">Home</a></li>
+              <li><Link to="/">Home</Link></li>
               <li aria-hidden>›</li>
               <li aria-current="page">Visit Us</li>
             </ol>
